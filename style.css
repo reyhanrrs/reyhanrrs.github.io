@@ -165,7 +165,7 @@ footer {
 }
 
 /* Mobile Version */
-@media (max-width: 576px) {
+@media (max-width: 992px) {
   .jumbotron {
     height: 770px;
     background-position: center;
@@ -197,7 +197,7 @@ footer {
   .about2 {
     margin-bottom: 50px;
     height: auto;
-    width: 450px;
+    width: 90%;
     border-color: #707070;
     background-color: rgba(255, 255, 255, 0.2);
     align-content: center;
