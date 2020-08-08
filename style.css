@@ -96,6 +96,7 @@ nav a div.logo img {
 .about2 p {
   text-align: center;
 }
+
 .tile {
   height: 70px;
   width: 20px;
@@ -161,4 +162,54 @@ section.contact {
 footer {
   height: 50px;
   line-height: 32px;
+}
+
+/* Mobile Version */
+@media (max-width: 576px) {
+  .jumbotron {
+    height: 770px;
+    background-position: center;
+  }
+
+  .parallax {
+    background-size: cover;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+  }
+
+  .aboutme {
+    background-image: url(img/about.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .tile {
+    display: none;
+  }
+
+  .aboutimg {
+    display: none;
+  }
+
+  .about1,
+  .about2 {
+    margin-bottom: 50px;
+    height: auto;
+    width: 450px;
+    border-color: #707070;
+    background-color: rgba(255, 255, 255, 0.2);
+    align-content: center;
+  }
+
+  .about1 p,
+  .about2 p {
+    text-align: center;
+    text-shadow: 1px 0.25px black;
+  }
+
+  section.about .card-info {
+    align-content: center;
+  }
 }
