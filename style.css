@@ -9,6 +9,19 @@ body {
   padding: 0px;
 }
 
+h1,
+h2 {
+  font-family: "Expletus Sans", cursive;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  font-family: "Recursive", sans-serif;
+}
+
 /* button */
 .button {
   font-family: "Recursive", sans-serif;
