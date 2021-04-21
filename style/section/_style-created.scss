@@ -1,0 +1,44 @@
+.created {
+  height: 100vh;
+  width: 100%;
+  h2 {
+    margin-top: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    border-bottom: 1px solid blue;
+  }
+  // Flickity
+  .gallery {
+    margin: 10px;
+    .gallery-cell {
+      // photo real size 640x425
+      width: 320px;
+      height: 215px;
+      border: 0.5px solid rgba(255, 255, 255, 0.2);
+      img {
+        width: 100%;
+        height: 100%;
+        filter: drop-shadow(1px -2px 0.5rem);
+      }
+    }
+  }
+  .git {
+    width: 200px;
+    height: 50px;
+    margin: 50px auto auto auto;
+    background-color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p,
+    a {
+      color: black;
+    }
+    img {
+      width: 50px;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+}

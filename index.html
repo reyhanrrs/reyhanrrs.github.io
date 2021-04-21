@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> cool ? rey : han </title>
+
+    <!-- Vue Script -->
+    <script src="https://unpkg.com/vue@next"/></script>
+
+    <link rel="stylesheet" href="style/reset.css" />
+    <link rel="stylesheet" href="style/base.css" />
+    <link rel="stylesheet" href="welcome/welcome.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="flickity/flickity.css" />   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+  <div id="universe">
+    <welcome v-model="name"></welcome>
+
+    <div id="pocket">
+      <div id="container">
+        <div class="core">
+          <heading> </heading>
+          <about> </about>
+        </div>
+          <experience v-bind:experience="experience"> </experience>
+          <created v-bind:images="images"> </created>          
+          <contact> </contact>    
+          <footing> </footing>
+    </div>
+    <!-- Lifts Butoon -->
+    <lifts></lifts>
+  </div>
+</div>
+  
+    <script src="flickity/flickity.js"></script>
+    <script src="script.js"></script>
+    <script src="welcome/welcome.js"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+@media only screen and (min-device-width: 602px) and (max-width: 1199px) {
+  // For tablet device
+  $animate-width-tablet: 80%;
+  $animate-height-tablet: 200px;
+  $ball-size-tablet: 30px;
+
+  body {
+    // Setting for h, p size and lift button
+    background-image: url(../img/mobile-backgrund.jpg);
+    background-position: left top;
+    h2 {
+      padding-top: 20%;
+      margin-bottom: 40px;
+      font-size: 100px;
+    }
+    h3 {
+      font-size: 50px;
+    }
+
+    p {
+      font-size: 30px;
+    }
+    // Lift Buttons
+    .lifts {
+      bottom: 5%;
+      right: 10%;
+      .lift {
+        align-self: center;
+        margin: 20px;
+        a {
+          border-radius: 100%;
+          padding: 20% 50% 20% 50%;
+          i {
+            font-size: 55px;
+            color: #fff;
+          }
+        }
+        a.hash {
+          padding: 20%;
+        }
+        a:active {
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
+  }
+  .animate-box {
+    .animate {
+      width: $animate-width-tablet;
+      height: $animate-height-tablet;
+      box-shadow: inset 0 0 3px rgb(255, 255, 255);
+      b {
+        width: $ball-size-tablet;
+        height: $ball-size-tablet;
+        box-shadow: inset -2px -2px 2px rgba(0, 0, 0, 0.5);
+        bottom: -$ball-size-tablet;
+        right: -$ball-size-tablet;
+        animation: vertMove-tablet 2.5s linear 2s infinite alternate,
+          horzMove-tablet 0.4s linear 2s infinite alternate;
+      }
+      b.second {
+        animation: vertMove-tablet 1.3s linear 2s infinite alternate,
+          horzMove-tablet 0.4s linear 2s infinite alternate;
+      }
+      b.thirth {
+        animation: vertMove-tablet 3s linear 2s infinite alternate,
+          horzMove-tablet 1.3s linear 2s infinite alternate;
+      }
+    }
+  }
+  .head {
+    nav {
+      ul {
+        li {
+          margin: 15px;
+          a {
+            font-size: 30px;
+            padding: 25px 20px 25px 20px;
+            border-radius: 20px;
+          }
+        }
+      }
+    }
+    .sub-head {
+      h1 {
+        font-size: 180px;
+      }
+      hr {
+        border-top: 3px solid rgb(255, 255, 255);
+      }
+    }
+  }
+  .about {
+    h2 {
+      border-bottom: 3px solid red;
+    }
+    p {
+      margin-right: 50px;
+      margin-left: 50px;
+    }
+  }
+  .experience {
+    p {
+      font-size: 25px;
+    }
+    hr {
+      width: 90%;
+      border-top: 3px dashed white;
+    }
+    h3 {
+      margin: 20px auto;
+    }
+
+    h4 {
+      font-size: 30px;
+      margin-left: 5%;
+      margin-bottom: 10px;
+      border-bottom: 2px groove rgb(0, 252, 252);
+      display: inline-block;
+    }
+
+    .ex-items {
+      position: relative;
+      width: max-content;
+      margin: auto;
+      left: 10%;
+    }
+
+    .ex-item {
+      margin: 50px;
+    }
+  }
+  .created {
+    h2 {
+      border-bottom: 5px solid blue;
+    }
+    // Flickity
+    .gallery {
+      margin: 5px;
+      .gallery-cell {
+        // photo real size 640x425
+        width: 720px;
+        height: 500px;
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .git {
+      width: max-content;
+      height: max-content;
+      padding: 15px;
+      margin: 50px auto auto auto;
+      background-color: rgba(255, 255, 255, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p,
+      a {
+        font-size: 40px;
+        color: black;
+      }
+      a {
+        font-style: italic;
+      }
+      img {
+        width: 130px;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+  }
+  .contact {
+    h2 {
+      border-bottom: 3px solid rgb(251, 255, 0);
+    }
+    .contact-container {
+      background-color: rgba(255, 255, 255, 0.05);
+      box-shadow: 2px 5px 5px 1px rgba(251, 255, 0, 0.3);
+      backdrop-filter: blur(0.15px);
+      -webkit-backdrop-filter: blur(0.15px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      align-self: center;
+      .contact-item {
+        display: flex;
+        justify-content: center;
+        margin: 40px;
+        a {
+          i {
+            text-align: center;
+            font-size: 70px;
+            margin: 7px;
+            display: block;
+          }
+          i.email {
+            font-size: 67px;
+          }
+          p {
+            font-size: 40px;
+          }
+        }
+      }
+    }
+  }
+  .foot {
+    p {
+      font-size: 50px;
+      span {
+        margin: 0;
+        padding: 0;
+        i {
+          color: hotpink;
+          font-size: 45px;
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+  // Tablet Animation
+  @keyframes vertMove-tablet {
+    from {
+      right: 0;
+    }
+    to {
+      right: calc(#{$animate-width-tablet} - #{$ball-size-tablet});
+    }
+  }
+  @keyframes horzMove-tablet {
+    from {
+      bottom: 0;
+    }
+    to {
+      bottom: calc(#{$animate-height-tablet} - #{$ball-size-tablet});
+    }
+  }
+}

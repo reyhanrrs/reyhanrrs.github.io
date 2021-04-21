@@ -1,0 +1,146 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+#container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  #core {
+    flex-grow: 3;
+    height: max-content;
+  }
+}
+
+// Setting for body,heading,parafraph and lift buttons
+body {
+  position: relative;
+  background-image: url(../img/mobile-backgrund.jpg);
+  background-size: cover;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+
+  h2 {
+    padding-top: 20%;
+    margin-bottom: 40px;
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  // Lift Buttons
+  .lifts {
+    display: flex;
+    position: fixed;
+    bottom: 5%;
+    right: 10%;
+    align-items: center;
+    .lift {
+      margin: 2px;
+      a {
+        padding: 8px;
+        border-radius: 40%;
+        font-size: 30px;
+        i {
+          color: #fff;
+        }
+      }
+      a.hash {
+        font-size: 25px;
+      }
+      a:active {
+        background-color: rgba(255, 255, 255, 0.25);
+      }
+    }
+  }
+}
+
+// Animation Phone Set
+$animate-width: 265px;
+$animate-height: 75px;
+$ball-size: 15px;
+
+// Animation Div
+.animate-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  .animate {
+    width: $animate-width;
+    height: $animate-height;
+    background-color: transparent;
+    border: 1px solid red;
+    position: relative;
+    box-shadow: inset 0 0 3px rgb(255, 255, 255);
+    overflow: hidden;
+
+    b {
+      display: block;
+      width: $ball-size;
+      height: $ball-size;
+      border-radius: 50%;
+      box-shadow: inset -2px -2px 2px rgba(0, 0, 0, 0.5);
+      position: absolute;
+      bottom: -$ball-size;
+      right: -$ball-size;
+      animation: vertMove 2.5s linear 2s infinite alternate,
+        horzMove 0.4s linear 2s infinite alternate;
+      background-color: yellow;
+    }
+
+    b.second {
+      animation: vertMove 1.3s linear 2s infinite alternate,
+        horzMove 0.4s linear 2s infinite alternate;
+      background-color: rgb(134, 190, 20);
+    }
+
+    b.thirth {
+      animation: vertMove 3s linear 2s infinite alternate,
+        horzMove 1.3s linear 2s infinite alternate;
+      background-color: rgb(236, 78, 16);
+    }
+  }
+}
+
+//Phone view, base style
+@import "section/style-head";
+@import "section/style-about";
+@import "section/style-experience";
+@import "section/style-created";
+@import "section/style-contact";
+@import "section/style-foot";
+
+// Phone Animation
+@keyframes vertMove {
+  from {
+    right: 0;
+  }
+  to {
+    right: calc(#{$animate-width} - #{$ball-size});
+  }
+}
+@keyframes horzMove {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: calc(#{$animate-height} - #{$ball-size});
+  }
+}
+
+// MEDIA QUERIES
+
+@import "media-querys/mq-tablet";
+@import "media-querys/mq-desktop";
