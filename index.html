@@ -1,17 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Link </title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Story</title>
+    <style>
+        body{
+            background-color: rgb(31, 30, 30);
+            box-shadow: inset 10px 10px 5px white, inset -10px -10px 5px white;
+            max-width: 100vw;
+            height: max-content;
+            overflow-x: hidden;
+            margin: 0;
+            padding-top: 5vh;
+            padding-bottom: 10vh;
+        }
+        .wrap{
+            text-align: center;
+        }
+        img{
+            width: 80%;
+            margin: 5%;
+            border: 1px solid black;
+            filter: grayscale(100%);
+        }
+        #gif{
+            filter: grayscale(0);
+            outline: none;
+            border: none;
+            position: absolute;
+            height: 250px;
+            width: auto;
+            top: 0px;
+            left: 0;
+        }
+        #gif-w{
+          text-align: center;position: fixed;top: 0;left: 0; width: 100%; height: 100%;
+            display: flex; justify-content: center; align-items: center;
+            display: none;
+        }
+    </style>
 </head>
 <body>
-  <p> While </p>
-  <a href="https://studio.code.org/s/express-2020/stage/14/puzzle/1" target="_blank" > https://studio.code.org/s/express-2020/stage/14/puzzle/1 </a>
-  <br>
-  <br>
-  <p> Scratech </p>
-   <a href="https://scratch.mit.edu/" target="_blank"> https://scratch.mit.edu/ </a>
+    <div class="wrap">
+        <img src="img/20141227_122546.jpg" alt="" onclick="decrease(this)" gray=100>
+        <img src="img/1504496141701.JPEG" alt="" onclick="decrease(this)" gray=100>
+        <img src="img/IMG-20200501-WA0017.jpg" alt="" onclick="decrease(this)" gray=100>
+    </div>
+    <div id="gif-w">
+        <img src="img/love.gif" id="gif" alt="">
+    </div>
+    
+    <p style="text-align: center; color: white;">My Family is the best treasure <span style="color: red;">&#10084</span></p>
+    <script>
+
+        function decrease(a){
+            let gray = a.getAttribute("gray") - 10;
+            if(gray < 0){
+                return;
+            }           
+            a.setAttribute('gray', gray);
+            percent = 'grayscale(' + gray + '%)';
+
+            if(gray == 0){
+               let gif =  document.getElementById('gif-w');
+               gif.style.display = "block";
+               
+               setTimeout(function(){ 
+                let gif =  document.getElementById('gif-w');
+                gif.style.display = "none";
+                }, 3000);              
+            }
+            a.style.filter = percent;
+        }
+
+        
+    </script>
 </body>
 </html>
